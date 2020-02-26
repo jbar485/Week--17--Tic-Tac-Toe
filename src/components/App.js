@@ -12,17 +12,17 @@ render(){
 
 
 const {dispatch, game } = this.props;
-console.log(this.props.game);
 
-console.log(this.props.game);
 
 
   return (
-    <div className="">
+    <div >
     <Header />
+    <div className="flip-horizontal-bottom">
     <Board
     board={this.props.game}
    />
+   </div>
     </div>
   );
 }

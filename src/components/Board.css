@@ -53,5 +53,14 @@ z-index: 1;
 
 .board {
   margin-left: 5vw;
-  margin-bottom: 5vh;
+  margin-top: 5vh;
+  cursor: wait;
+}
+
+.swinner {
+  text-align: center;
+  text-shadow: 1px 1px red;
+  font-weight: bold;
+  font-family: fantasy;
+  text-decoration: underline;
 }

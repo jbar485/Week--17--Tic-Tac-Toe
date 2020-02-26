@@ -1,10 +1,15 @@
 import React from 'react';
 
 function Markings(props) {
+
+  const markingsStyle = {
+    textAlign: 'center',
+    fontSize: '400px',
+    marginTop: '-13%',
+  }
   return (
-    <div className="">
-<h1> {props.square.position} </h1>
-<h1> {props.square.marking} </h1>
+    <div>
+    <h1 style={markingsStyle}> {props.square.marking} </h1>
     </div>
   );
 }
