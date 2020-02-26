@@ -43,14 +43,15 @@ const initialState = [
 export default function Marking(state=initialState, action){
   switch (action.type){
     case 'MARK_SPOT':
+    let newState = state
     state.map((square) => {
       if (square.position === action.position) {
-        return{
+      newState[parseInt(action.position)-1] = {
         ...square,
         marking: action.marking
-      };
       }
-      return square
+      }
+      return newState
     });
     default:
     return state

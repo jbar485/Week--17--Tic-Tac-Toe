@@ -12,6 +12,12 @@ const store = createStore (
   MarkingReducer
 );
 
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
+
+
 ReactDOM.render(
   <Provider store={store}>
   // <HashRouter>

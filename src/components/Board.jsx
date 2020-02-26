@@ -1,62 +1,72 @@
 import React from 'react';
 import './Board.css';
 import Markings from './Markings'
-function Board() {
+import { connect } from 'react-redux';
+function Board(props) {
+
+  const action = {
+    type: 'MARK_SPOT',
+    position: '1',
+    marking: 'x',
+  }
+  props.dispatch(action)
+
+
   return (
     <div className="board">
       <div className="topRow">
         <div className="top1">
         <Markings
-        position={'1'}
+        square = {props.board[0]}
         />
         </div>
         <div className="top2">
         <Markings
-        position={'2'}
+        square = {props.board[1]}
         />
         </div>
         <div className='top3'>
         <Markings
-        position={'3'}
+        square = {props.board[2]}
         />
         </div>
       </div>
       <div className="midRow">
         <div className="mid1">
         <Markings
-        position={'4'}
+        square = {props.board[3]}
         />
         </div>
         <div className="mid2">
         <Markings
-        position={'5'}
+        square = {props.board[4]}
         />
         </div>
         <div className='mid3'>
         <Markings
-        position={'6'}
+        square = {props.board[5]}
         />
         </div>
       </div>
       <div className="lowRow">
         <div className="low1">
         <Markings
-        position={'7'}
+        square = {props.board[6]}
         />
         </div>
         <div className="low2">
         <Markings
-        position={'8'}
+        square = {props.board[7]}
         />
         </div>
         <div className='low3'>
         <Markings
-        position={'9'}
+        square = {props.board[8]}
         />
         </div>
       </div>
     </div>
   );
 }
-
+Board = connect()(Board)
 export default Board;

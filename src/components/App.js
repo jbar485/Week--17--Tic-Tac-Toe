@@ -6,13 +6,23 @@ import { connect } from 'react-redux';
 
 
 class App extends Component {
+
 render(){
+
+
+
 const {dispatch, game } = this.props;
-console.log(this.props);
+console.log(this.props.game);
+
+console.log(this.props.game);
+
+
   return (
     <div className="">
     <Header />
-    <Board />
+    <Board
+    board={this.props.game}
+   />
     </div>
   );
 }
